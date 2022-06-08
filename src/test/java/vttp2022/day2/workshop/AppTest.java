@@ -21,7 +21,9 @@ public class AppTest
     {
         assertTrue( true );
     }
-
+    
+    //Test to see that the displayed values are correct
+    //Assertion will test if something is true. If false, it will thro an assertion error.
     @Test
     public void testBankAccount(){
         BankAccount bkAcc= new BankAccount("Andrew Bank Acoount");
@@ -30,6 +32,7 @@ public class AppTest
         assertEquals(500, finalBalance, .1);
     }
 
+    //Test to see that the deposit length and interest can only be changed once. 
     @Test
     public void testFixedDepositAccountChangeInterestAndDuration(){
         try{
@@ -45,11 +48,10 @@ public class AppTest
         }
      }
 
-    @Test
+     //Test that the duration is changed. 
+    @Test 
     public void testFixedDepositAccountchangeInterestAndDurationOnce(){
-        FixedDepositAccount fdAcc = 
-            new FixedDepositAccount("My FD acc", 10000);
-
+        FixedDepositAccount fdAcc = new FixedDepositAccount("My FD acc", 10000);
         System.out.println("1. Fixed Deposit Acc balance > " + fdAcc.getBalance());
         fdAcc.setDurationandInterest(4, 12);
         System.out.println("2. Fixed Deposit Acc balance > " + fdAcc.getBalance());
