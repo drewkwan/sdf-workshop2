@@ -95,7 +95,7 @@ public class BankAccount {
         this.accountClosingDate = accountClosedDate;
     }
 
-    // Withdraw Method -- null is just a reference to an unset value.
+    // Withdraw Method -- null is just a reference to an unset value. You don't need to set the value to null. You can just set Float withdrawAmtF;
     public float withdraw (String withdrawAmt) {
         Float withdrawAmtF = null;
         //Convert the withdraw amount to a float value. 

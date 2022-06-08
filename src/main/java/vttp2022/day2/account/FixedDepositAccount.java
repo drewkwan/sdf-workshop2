@@ -21,6 +21,7 @@ public class FixedDepositAccount extends BankAccount {
     }
 
     //overload with duration. Is it a must for me to overload one by one.
+    //When overloading, you overload one by one to create flexibility in the code. If I want to call the second, I pass through 3 instances. If I want to call the thid, I pass 2 instances.
     public FixedDepositAccount(String name, float initialAmount, float interest, int duration) {
         super(name, initialAmount);
         this.interest = interest;
@@ -68,7 +69,8 @@ public class FixedDepositAccount extends BankAccount {
         //NOP
         return 0;
     }
-    //why here no return?
+    //why here no return? because the BankAccount file has indicated a return. 
+    //if i want to return a value, i can just indicate a return value in the override here, but i'll also have to update the bankaccount.java file. 
     @Override
     public void deposit(String withdrawAmt) {
         //NOP
